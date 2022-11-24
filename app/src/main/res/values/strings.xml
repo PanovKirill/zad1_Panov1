@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">zad1_Panov</string>
+    <string name="register">Регистрация</string>
+    <string name="enter">enter</string>
+    <string name="press">press</string>
+    <string name="Password">Password</string>
+    <string name="Name">Name</string>
+</resources>
