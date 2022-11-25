@@ -4,35 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity2"
+    tools:context=".MainActivity4"
     android:background="@color/purple_200">
 
-
     <TextView
+        android:id="@+id/Text1"
         android:layout_width="142dp"
         android:layout_height="101dp"
-        android:hint="@string/Name"
+        android:text=""
         android:textSize="35sp"
-        android:id="@+id/editText1"
-        app:layout_constraintBottom_toTopOf="@+id/sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintHorizontal_bias="0.059"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.368" />
+        app:layout_constraintVertical_bias="0.153" />
 
     <Spinner
         android:id="@+id/sp"
-        android:layout_width="59dp"
-        android:layout_height="33dp"
+        android:layout_width="412dp"
+        android:layout_height="50dp"
         android:background="@color/teal_700"
         android:entries="@array/catNames"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/Text1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.348" />
-
+        app:layout_constraintVertical_bias="0.0"
+        android:popupBackground="@color/purple_700"/>
 
 </android.support.constraint.ConstraintLayout>

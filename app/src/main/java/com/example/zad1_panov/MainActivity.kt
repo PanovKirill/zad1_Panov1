@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var settings: SharedPreferences
     private lateinit var nameBox: EditText
     lateinit var nameView: TextView
+    public var name = ""
 
     @Override
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
     }
     fun SaveName(view: View){
         nameBox=findViewById(R.id.editText)
-        var name = nameBox.getText().toString();
+        name = nameBox.getText().toString();
         var prefEditor = settings.edit();
         prefEditor.putString(PREF_NAME, name);
         prefEditor.apply();
@@ -35,12 +36,15 @@ class MainActivity : AppCompatActivity() {
         nameView=findViewById(R.id.editText)
         var name = settings.getString(PREF_NAME,"неопределено")
         nameView.setText(name)
-        nameBox = findViewById(R.id.editText1);
+        nameBox = findViewById(R.id.editText);
         nameBox.setText(name)
     }
 
     fun randomMe(view: View){
-    val randomIntent = Intent(this, MainActivity2::class.java)
+        nameBox = findViewById(R.id.editText);
+    var nm =nameBox.text.toString()
+    var randomIntent = Intent(this, MainActivity4::class.java)
+        randomIntent.putExtra("login",nm)
         startActivity(randomIntent)
     }
 }
